@@ -13,7 +13,6 @@ const list = document.getElementById("list");
 let tempAmount = 0;
 
 // Set Budget Functions
-
 totalAmountButton.addEventListener("click", () => {
     tempAmount = totalAmount.value;
     // Bad input
@@ -30,7 +29,6 @@ totalAmountButton.addEventListener("click", () => {
 });
 
 // Disable edit and delete button function
-
 const disableButtons = (bool) => {
     let editButtons = document.getElementsByClassName("edit");
     Array.from(editButtons).forEach((element) => {
@@ -39,7 +37,6 @@ const disableButtons = (bool) => {
 };
 
 // Modify list elements function
-
 const modifyElement = (element, edit = false) => {
     let parentDiv = element.parentElement;
     let currentBalance = balanceValue.innerText;
@@ -58,7 +55,6 @@ const modifyElement = (element, edit = false) => {
 };
 
 // Create list function
-
 const listCreator = (expenseName, expenseValue) => {
     let subListContent = document.createElement("div");
     subListContent.classList.add("sublist-content", "flex-space");
@@ -82,7 +78,6 @@ const listCreator = (expenseName, expenseValue) => {
 };
 
 // Add expenses function
-
 checkAmountButton.addEventListener("click", () => {
     // Check empty
     if (!userAmount.value || !productTitle.value) {
